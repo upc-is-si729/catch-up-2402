@@ -1,13 +1,15 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LogoApiService {
   baseUrl = 'https://logo.clearbit.com/';
-  constructor() { }
+
+  constructor() {
+  }
 
   getUrlToLogo(source: any) {
-    return `${this.baseUrl}${ new URL(source.url).hostname }`;
+    return `${this.baseUrl}${new URL(source.url).hostname}`;
   }
 }
