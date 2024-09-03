@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {MatSidenav, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
 import {MatToolbar} from "@angular/material/toolbar";
 import {SourceListComponent} from "../../../news/components/source-list/source-list.component";
@@ -34,9 +34,8 @@ export class SideNavigationBarComponent implements OnInit {
   sources: Array<Source> = [];
   articles: Array<Article> = [];
 
-  constructor(private newsApi: NewsApiService,
-              private logoApi: LogoApiService) {
-  }
+  private newsApi = inject(NewsApiService);
+  private logoApi = inject(LogoApiService);
 
   searchArticlesForSource(source: any) {
     console.log(`selected source is: ${source.id}`);
