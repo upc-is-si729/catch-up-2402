@@ -8,7 +8,6 @@ import {NgForOf} from "@angular/common";
   standalone: true,
   imports: [
     ArticleItemComponent,
-    NgForOf
   ],
   templateUrl: './article-list.component.html',
   styleUrl: './article-list.component.css'
