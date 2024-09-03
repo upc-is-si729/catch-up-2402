@@ -2,7 +2,6 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Source} from "../../model/source.entity";
 import {SourceItemComponent} from "../source-item/source-item.component";
 import {MatNavList} from "@angular/material/list";
-import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-source-list',
@@ -10,7 +9,6 @@ import {NgForOf} from "@angular/common";
   imports: [
     SourceItemComponent,
     MatNavList,
-    NgForOf
   ],
   templateUrl: './source-list.component.html',
   styleUrl: './source-list.component.css'
